@@ -53,3 +53,14 @@ Curso Treinamento Kubernetes e AKS no nextwave(LuisDEV)
 
 - Statefulset
   - "Statefulset" normalmente é utilizado para criar aplicações que precisam manter estado (dados/arquivos), principalmente para o cenário de banco de dados, ou clusters de bancos de dados.
+
+- Service
+  - O objeto service é utilizado para distribuir chamadas entre réplicas de um mesmo deployment
+  - Por exemplo uma aplicação que responde um front-end com três réplicas, as chamadas devem ser direcionadas ao service daquele front-end, e o mesmo é responsável por repassar as chamadas para um dos três pods, distribuindo de forma aleatória entre os eles.
+  - Existem três tipos de service:
+    - NodePort
+    - ClusterIP
+    - LoadBalancer
+
+- Ingress
+  - O Ingress atua como uma porta de entrada do cluster para aplicações http/https expondo apenas um único ponto de conectividade externa e resolvendo encaminhamentos de requisições entre services através do cabeçalho http
