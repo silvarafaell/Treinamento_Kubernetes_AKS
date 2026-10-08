@@ -64,3 +64,21 @@ Curso Treinamento Kubernetes e AKS no nextwave(LuisDEV)
 
 - Ingress
   - O Ingress atua como uma porta de entrada do cluster para aplicações http/https expondo apenas um único ponto de conectividade externa e resolvendo encaminhamentos de requisições entre services através do cabeçalho http
+
+- Liveness e Readiness
+  - Os campos "Liveness" e "Readiness" são responsáveis pela checagem da saúde do container que está dentro do Pod. Essa checagem pode ser feita através de um comando script, uma checagem de porta TCP ou a requisição num endpoint da aplicação que devolva um status code entre 200 e 399 (qualquer outro status code será     considerado como falha).
+    - livenessProbe: Responsável por fazer a checagem de tempos em tempos para garantir que a aplicação está responsiva. Usado durante a execução da aplicação.
+    - readinessProbe: Responsável por fazer a checagem que garante que a aplicação esteja pronta para receber requisições. Usado até o fim da inicialização da aplicação.
+
+- Azure Kubernetes Service (AKS)
+  - O Azure Kubernetes Service simplifica a publicação de um cluster Kubernetes no Azure, passando parte de responsabilidade operacional para o Azure
+  - Quando se cria um cluster AKS, um painel de controle é adicionado e configurado sem custo, e os únicos custos são decorrentes dos nós que estão anexados ao cluster
+  - Pode ser criado via Azure CLI, Azure PowerShell, Azure Portal, e templates de publicação como ARM, Bicep, e Terraform
+  - Dá para configurar aspectos como rede, integração com Azure AD, monitoramento, e outros enquanto o processo de publicação está executando
+
+- HELM
+  - Helm é uma ferramenta que pode ser considerada como um "gerenciador de pacotes" para Kubernetes, além de ajudar a otimizar os manifestos YAML, centraliza valores e configurações num único arquivo
+  - Com inúmeros repositórios centrais, também é possível baixar "pacotes" pré configurados e prontos para uso
+  - Outra grande vantagem é a possibilidade de "empacotar" a sua própria aplicação e distribuí-la na sua organização ou comunidade
+  - obs: Para a instalação do Helm, siga as instruções neste link
+  
